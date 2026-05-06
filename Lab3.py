@@ -12,6 +12,22 @@ def bubble_sort(arr, sorting_order):
     # Get number of elements in the list
     n = len(arr_result)
 
+    #REQ-03 - The list has 10 or more items.
+    if n>=10:
+        print("Too many numbers entered.")
+        return 1
+
+    # REQ-04 - The listr is empty.   
+    if n==0:
+        print("No number has been entered.")
+        return 0
+
+    #REQ-05 - At least one item is not an integer.   
+    for eachitem in arr_result:
+        if isinstance(eachitem, int)==False:
+            print("Not all numbers entered are integers.")
+            return 2
+
     if n < 10:
         # Traverse through all array elements
         for i in range(n - 1):
