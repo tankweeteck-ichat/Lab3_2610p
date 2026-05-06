@@ -34,9 +34,12 @@ def get_employees_by_dept(department):
     result = []
 
     # Add your implementation from here
-
+    for eachitem in employee_data:
+        if (eachitem["department"] == department):
+            result.append(eachitem)
 
     return result
+
 
 def display_all_records():
     print(("Name" + "\t" +"Age" +"\t" +"Department" +"\t" +"Salary" ).expandtabs(15))
